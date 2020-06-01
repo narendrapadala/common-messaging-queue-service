@@ -32,7 +32,7 @@ public class CmqsProperties {
 	private boolean isAwsSes;
 
 	@Value("${cmsqs.mail.smtp.port:587}")
-	private int smtpPort;
+	private Long smtpPort;
 
 	@Value("${cmsqs.mail.smtp.host}")
 	private String smtpHost;
@@ -120,14 +120,14 @@ public class CmqsProperties {
 	/**
 	 * @return
 	 */
-	public int getSmtpPort() {
+	public Long getSmtpPort() {
 		return smtpPort;
 	}
 
 	/**
 	 * @param smtpPort
 	 */
-	public void setSmtpPort(int smtpPort) {
+	public void setSmtpPort(Long smtpPort) {
 		this.smtpPort = smtpPort;
 	}
 

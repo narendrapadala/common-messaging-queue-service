@@ -11,7 +11,7 @@ public class EmailConfig {
 	private String awsSecretKey;
 	private String awsSesRegion;
 
-	private int smtpPort;
+	private Long smtpPort;
 	private String smtpHost;
 	private String smtpUser;
 	private String smtpPass;
@@ -22,7 +22,7 @@ public class EmailConfig {
 		private String awsAccessKey;
 		private String awsSecretKey;
 		private String awsSesRegion;
-		private int smtpPort;
+		private Long smtpPort;
 		private String smtpHost;
 		private String smtpUser;
 		private String smtpPass;
@@ -30,7 +30,7 @@ public class EmailConfig {
 		public Builder() {
 		}
 
-		Builder(boolean isAwsSes, String awsAccessKey, String awsSecretKey, String awsSesRegion, int smtpPort,
+		Builder(boolean isAwsSes, String awsAccessKey, String awsSecretKey, String awsSesRegion, Long smtpPort,
 				String smtpHost, String smtpUser, String smtpPass) {
 			this.isAwsSes = isAwsSes;
 			this.awsAccessKey = awsAccessKey;
@@ -62,7 +62,7 @@ public class EmailConfig {
 			return Builder.this;
 		}
 
-		public Builder smtpPort(int smtpPort) {
+		public Builder smtpPort(Long smtpPort) {
 			this.smtpPort = smtpPort;
 			return Builder.this;
 		}
@@ -135,11 +135,11 @@ public class EmailConfig {
 		this.isAwsSes = isAwsSes;
 	}
 
-	public int getSmtpPort() {
+	public Long getSmtpPort() {
 		return smtpPort;
 	}
 
-	public void setSmtpPort(int smtpPort) {
+	public void setSmtpPort(Long smtpPort) {
 		this.smtpPort = smtpPort;
 	}
 

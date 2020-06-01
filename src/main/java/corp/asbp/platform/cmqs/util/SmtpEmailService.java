@@ -40,7 +40,7 @@ public class SmtpEmailService {
 	 * @param port
 	 * @return
 	 */
-	public Session getSmtpConfig(int port) {
+	public Session getSmtpConfig(Long port) {
 
 		Properties props = System.getProperties();
 		props.put("mail.transport.protocol", "smtp");
